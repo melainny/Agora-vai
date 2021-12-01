@@ -6,15 +6,34 @@
 
 </head>    
 <body>
-<h1>Contador</h1>
-<p id="number">0</p>
-<button>Menos</button>
-<button>Mais</button>
+    <h1>Contador</h1>
+    <p id="number">0</p>
+    <button onclick="subtrair()">Menos</button>
+    <button onclick="somar()">Mais</button>
 
 <style>
     body {
         text-align: center;
     }
 </style>
+    <script>
+        const p = document.getElementById("number")
+
+        function somar(){
+            let num = parseInt(p.innerText)
+            num = num + 1
+            p.innerText = num
+        } 
+
+        function subtrair(){
+            let num = parseInt(p.innerText)
+            num = num - 1
+            p.innerText = num
+        }
+
+    </script>
+
+
+
 </body>
 </html>
